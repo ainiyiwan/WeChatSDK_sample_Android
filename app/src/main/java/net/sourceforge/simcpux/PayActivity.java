@@ -90,6 +90,7 @@ public class PayActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+				//检查微信版本是否支持支付
 				boolean isPaySupported = api.getWXAppSupportAPI() >= Build.PAY_SUPPORTED_SDK_INT;
 				Toast.makeText(PayActivity.this, String.valueOf(isPaySupported), Toast.LENGTH_SHORT).show();
 			}
